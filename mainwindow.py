@@ -6,7 +6,7 @@ import os
 class mainwindow(tk.Tk):     
     def __init__(self, screenName = None, baseName = None, className = "Tk", useTk = True, sync = False, use = None):
         super().__init__(screenName, baseName, className, useTk, sync, use)
-    #模式二按键位置
+    #模式二按键位置数据
         self.x1, self.x2, self.y1, self.y2 = 0, 0, 0, 0
         self.width, self.height = 0, 0
     #窗口设置
@@ -120,7 +120,6 @@ class mainwindow(tk.Tk):
                     self.width, self.height = abs(self.x1 - self.x2), abs(self.y1 - self.y2)
                     self.set_mode2_text(1, x, y)
                     self.set_mode2_text(2, self.width, self.height)
-
             return click_range
         
     def set_ico(self):
